@@ -6,19 +6,17 @@
 }
 
 #main-container{
-    display: flex;
-    justify-content: center;
     width: 100%;
-    max-width:1200px;
-    height: 100vh;
+    margin: auto;
+    display: flex;
+    height: 99vh;
+    justify-content: center;
     align-items: center;
-    margin: auto;  
-  
 }
 #box-container{
     display: block;
     position: relative;
-    width: 100%;
+    width: 1200px;
     height:700px;
     background-color: #FBDD00;
 }
@@ -89,7 +87,17 @@
     max-width:120px;
     border-radius: 50%;
     position: absolute;
+    z-index: 1;
     transform: rotate(270deg);
+    animation: Balldance;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
+    transition: width 0.5s;
+    animation-delay: 1s;
+
+
 }
 .smiley-eyes::before,.smiley-eyes::after{
     content: "";
@@ -98,7 +106,6 @@
     width: 10px;
     height: 10px;
     background-color: rgba(123, 108, 0, 1);
-    transition: 0.5s;
 }
 .smiley-eyes::before{
     left: 35%;
@@ -116,4 +123,19 @@
     border-top: 35px solid transparent;
     border-bottom: 10px solid rgba(123, 108, 0, 1);
     border-radius: 50%;
+}
+/* Now  i will add the css Animation to this one Project so here we go  */
+
+@keyframes Balldance {
+    
+    0%{
+        transform:rotate(-270deg);
+        transform: translateX(0px);
+
+    }
+   
+    100%{
+        transform: translateY(240px);
+    }
+
 }
