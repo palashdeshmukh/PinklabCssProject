@@ -2,34 +2,35 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  
 }
+
 #main-container{
     display: flex;
     justify-content: center;
-    border: 1px solid black;
     width: 100%;
-    height:100vh;
+    max-width:1200px;
+    height: 100vh;
     align-items: center;
-   
+    margin: auto;  
   
 }
 #box-container{
     display: block;
     position: relative;
     width: 100%;
-    max-width: 1200px;
-    height: 700px;
+    height:700px;
     background-color: #FBDD00;
 }
-.box1{
+.internal-box-container{
     position: absolute;
     width: 100%;
 }
-.up{
+.box-position-top{
     top:100px;
     height: 300px;
 }
-.down{
+.box-position-bottom{
     bottom: 0;
     width: 100%;
     display: flex;
@@ -37,13 +38,15 @@
     flex-wrap: nowrap;
   
 }
-.div1{
+.div-inner-wrapper-one{
     width: 100%;
     display:inline-flex;
-    background-color: #FF2852;
+    background-color:transparent;
+    border: transparent;
 }
-.div2{
+.div-inner-wrapper-two{
     width: 100%;
+    border: none;
     background-color: #FF2852;
     height: 75px;
 }
@@ -63,17 +66,17 @@
     border-bottom:75px solid #FF2852;
   
 }
-.text-drawing-smile{
+.text-draw-smiley{
     width: 100%;
     height: 140px;
 }
-.text-drawing-smile h1{
+.text-draw-smiley h1{
     color: white;
     text-align: center;
     line-height: 150px;
     font-size:55px;
 }
-.smaily-head{
+.smiley-head{
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
@@ -88,7 +91,7 @@
     position: absolute;
     transform: rotate(270deg);
 }
-.eyes::before,.eyes::after{
+.smiley-eyes::before,.smiley-eyes::after{
     content: "";
     position: absolute;
     top: 35%;
@@ -97,14 +100,14 @@
     background-color: rgba(123, 108, 0, 1);
     transition: 0.5s;
 }
-.eyes::before{
+.smiley-eyes::before{
     left: 35%;
 }
-.eyes::after{
+.smiley-eyes::after{
     right: 35%;
 }
 
-.mouth{
+.smiley-lips{
     position: absolute;
     width:80px;
     height:50px;
