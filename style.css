@@ -136,9 +136,11 @@
     25%{
     
         transform: translateX(270px);
-
     }
-   
+    50%{
+    
+        transform: translateX(-270px);
+    }
    
     100%{
         transform: translateY(240px);
